@@ -1,0 +1,36 @@
+.grille {
+    display: grid;
+    padding: 0 8vw;
+}
+
+.grille--4 {
+    gap: 2.5vw;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grille__item {
+    width: 100%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+
+
+}
+
+.tuile-content {
+
+    & h4 {
+        line-height: 2em;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    & img {
+        width: 100%;
+    }
+
+    & a {
+        font-size: 24px;
+    }
+
+}

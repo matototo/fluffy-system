@@ -1,7 +1,0 @@
-get_header(); ?>
-
-<h2>index point p h p</h2>
-
-<?php
-get_footer();
-?>

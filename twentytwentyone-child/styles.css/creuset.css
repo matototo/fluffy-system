@@ -1,0 +1,41 @@
+.creuset-article {
+    display: flex;
+    align-items: center;
+
+    & img {
+        height: 300px;
+    }
+}
+
+.creuset-content {
+    display: flex;
+    flex-direction: column;
+
+    & p {
+        padding:0 ;
+        padding-left: 2rem;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    & h3 {
+        font-size: 36px;
+        padding-left: 2rem;
+        margin-bottom: 8px;
+    }
+
+    & h4 {
+        padding: 0;
+        padding-left: 2rem;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+}
+
+.article-produit {
+    padding: 0 3rem 0 3rem;
+
+    & h2 {
+        font-size: 48px;
+    }
+}

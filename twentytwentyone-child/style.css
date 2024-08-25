@@ -5,3 +5,10 @@ Author: Mateo Fortin-Lubin
 Template: twentytwentyone
 Version: 2.0
 */
+
+@import url('./styles.css/reset.css');
+@import url('./styles.css/hero.css');
+@import url('./styles.css/intro.css');
+@import url('./styles.css/creuset.css');
+@import url('./styles.css/editor.css');
+@import url('./styles.css/grille.css');

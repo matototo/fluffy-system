@@ -1,0 +1,14 @@
+/* Réinitialisation des marges et des espacements */
+body, h1, p, a, ul, li{
+    margin: 0;
+    padding: 0;
+}
+
+.site-main {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
