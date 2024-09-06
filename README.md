@@ -23,7 +23,7 @@ Pour lancer le theme :
 - Installez une nouvelle instance WP
 - Telechargez le plugin Updraft +
 - Uploadez les fichier(s) backup remis avec le projet
-- Televersez le theme enfant nommer twentytwentyone-child remis avec le projet dans votre dossier local/instanceWP/wp-content/themes/
+- Televersez le theme enfant nommer twentytwentyone-child remis avec le projet dans votre dossier local/nom_du_dossier_wordpress/wp-content/themes/
 - Activez le theme enfant dans l'interface WP
 - That's it !
 
