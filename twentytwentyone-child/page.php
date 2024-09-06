@@ -1,7 +1,9 @@
 
 
 <?php
-//vs_image_bg
+// Cette page est la meme que la page d'accueil en gros sauf qu'elle gere l'affichage des pages vaisselle et service
+
+
 // On charge l'en-tête
 get_header();
 
@@ -18,7 +20,7 @@ if ( $the_query->have_posts()  ) : ?>
     <?php
         $infos = get_fields();
 
-        // on recupere les infos pour le hero content a partir d'$infos
+        // On recupere les infos pour le hero content a partir d'$infos
         $vs_image_bg = $infos['vs_image_bg'];
         $vs_introduction = $infos['vs_introduction'];
     ?>
@@ -33,10 +35,10 @@ if ( $the_query->have_posts()  ) : ?>
 
     <?php
 
-    //echo $post->post_title;
+    // on peux accedder a post_title ici et non dans la front-page donc j'utilise la variable verification pour afficher dynamiquement les differentes categories 
     $verification = $post->post_title;
-    //echo "<br>";
-    //echo $verification;
+    $verification = strtolower($verification);
+    // die();
     ?>
 
 <div class="grille grille--4">
@@ -46,48 +48,31 @@ if ( $the_query->have_posts()  ) : ?>
                 $infos_article = get_fields();
                 $article_categorie = $infos_article['article_categorie'];
                 
-                //$post = the_post();
-                //if($post->post_title == $article_categorie) {
-                //    echo 'test';
-               // }
                 
-                // on recupere les infos pour les articles a partir d'$infos
-                    if ($infos_article) {
-                        //echo 'okei';
-                        $article_image = $infos_article['article_image'];
-                        //$article_description = $infos_article['article_description'];
-                        //$article_prix = $infos_article['article_prix'];
-                        $article_actif = $infos_article['article_actif'];
-                        //var_dump($infos_article);
-                        //echo $article_categorie;
-                        //echo the_title();
+                if ($infos_article) {
 
+                    $article_image = $infos_article['article_image'];
+                    $article_actif = $infos_article['article_actif'];
+                }
+                ?>
+
+                <?php
+                if ($article_actif) {
+                    if($article_categorie == $verification) {
+                        ?>
+                        <div class="grille__item tuile-content">
+                            <a href="<?php the_permalink(); ?>">
+                            <img src="<?php echo $article_image; ?>" alt=""></img>
+                            <h4><?php echo get_the_title(); ?></h4></a>
+                        </div>
+                        <?php
                     }
-                    //echo $verification;
-                    ?>
-
-                    <?php
-                    // TODO: Changer la conditionelle il faut quelle soit dynamique :
-                    // trouver les deux categories et faire un foreach array as categories
-                    // afficher article et compter jusqua $i le nombre d'article
-                    // FIXME: comment je vais pouvoir afficher les titres des categories justa avant les articles si cest dans un grid et si on affiche tout ca dans une condition, le balisage deviens difficile.
-                    if ($article_actif) {
-                        if($article_categorie == $verification) {
-                            ?>
-                            <div class="grille__item tuile-content">
-                                <a href="<?php the_permalink(); ?>">
-                                <img src="<?php echo $article_image; ?>" alt=""></img>
-                                <h4><?php echo get_the_title(); ?></h4></a>
-                            </div>
-                            <?php
-                        }
-                    }
-
-
+                }
 
 endwhile;
 
 endif; 
 
+// On charge le footer
 get_footer();
 ?>

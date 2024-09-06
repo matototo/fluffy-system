@@ -1,13 +1,10 @@
 <?php
+// Pas grand chose a dire ici aussi on va chercher plus d'info mais l'affichage est plus simple car on affiche seulement un article
 
-//if (get_post_type() == 'article') {
-//    include(get_template_directory() . '/single-article.php');
-//    exit;
-//}
-
+// On va chercher l'en-tetet
 get_header();
 
-//echo 'test';
+
 if (get_post_type() == 'article') : ?>
 
     <section class="article-produit">
@@ -18,7 +15,7 @@ if (get_post_type() == 'article') : ?>
     $article_description = $infos_article['article_description'];
     $article_prix = $infos_article['article_prix'];
     $article_actif = $infos_article['article_actif'];
-    // 
+
     ?>
 
     <?php
@@ -29,7 +26,7 @@ if (get_post_type() == 'article') : ?>
         <div class="creuset-article">
             <img src="<?php echo $article_image; ?>" alt="">
             <div class="creuset-content">
-                <h3><?php echo $article_categorie; ?></h3>
+                <h3><?php echo htmlspecialchars($article_categorie); ?></h3>
                 <h4>Description</h4>
                 <p><?php echo $article_description; ?></p>
                 <h4><?php echo $article_prix; ?> $</h4>
@@ -43,4 +40,5 @@ if (get_post_type() == 'article') : ?>
     </section>
 <?php endif; 
 
+// On va chercher le footer
 get_footer();

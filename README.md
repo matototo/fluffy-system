@@ -5,6 +5,14 @@
 Matéo-thomas Fortin-lubin
 e2194725
 
+lien webdev :
+
+- https://e2194725.webdev.cmaisonneuve.qc.ca/intro-cms/
+
+lien github :
+
+- https://github.com/matototo/fluffy-system
+
 Authentification :
 
 Username : admin
@@ -19,4 +27,7 @@ Pour lancer le theme :
 - Activez le theme enfant dans l'interface WP
 - That's it !
 
-NB: il faut avoir le theme twentytwentyone installer avec votre projet pour que ça marche, WP n'installe pas ce theme lors de l'instanciation.
+NB:
+
+- il faut verifier le chemin de l'image par defaut cela (localhost/nom_du_dossier_wordpress) dans mon cas nom_du_dossier_wordpress == intro-cms
+- il faut avoir le theme twentytwentyone installer avec votre projet pour que ça marche, WP n'installe pas ce theme lors de l'instanciation.
